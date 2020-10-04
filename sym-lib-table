@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name AS3394E)(type Legacy)(uri ${KIPRJMOD}/AS3394E.lib)(options "")(descr ""))
+  (lib (name CEM3394)(type Legacy)(uri ${KIPRJMOD}/CEM3394.lib)(options "")(descr ""))
+)
