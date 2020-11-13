@@ -89,7 +89,7 @@ PW
 Text Label 1100 2800 0    50   ~ 0
 GND
 Text Label 1100 2900 0    50   ~ 0
-EXT_IN
+NOISE_IN
 Text Label 1100 3000 0    50   ~ 0
 MIX_BAL
 Text Label 1100 3100 0    50   ~ 0
@@ -144,7 +144,7 @@ Wire Wire Line
 Wire Wire Line
 	1800 2800 1800 3200
 Connection ~ 2100 3200
-Text Label 2750 3100 2    50   ~ 0
+Text Label 4450 3100 0    50   ~ 0
 EXT_IN1
 Text Label 2750 3200 2    50   ~ 0
 GND
@@ -208,9 +208,7 @@ F 3 "~" H 2300 2300 50  0001 C CNN
 	1    2300 2300
 	1    0    0    -1  
 $EndComp
-Text Label 1100 4650 0    50   ~ 0
-GND
-Text Label 1100 5000 0    50   ~ 0
+Text Label 1850 5050 0    50   ~ 0
 GND
 $Comp
 L Device:R R1
@@ -233,7 +231,7 @@ Text Label 4400 4500 2    50   ~ 0
 WAVE_OUT
 Text Label 2750 2500 2    50   ~ 0
 SUB_OUT
-Text Label 1100 4550 0    50   ~ 0
+Text Label 1850 4750 0    50   ~ 0
 SUB_OUT
 Text Label 4650 5000 2    50   ~ 0
 GND
@@ -242,7 +240,7 @@ L Device:R R3
 U 1 1 5F7A28F7
 P 4650 4700
 F 0 "R3" H 4750 4750 50  0000 L CNN
-F 1 "1k" H 4750 4700 50  0000 L CNN
+F 1 "500R" H 4750 4700 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4580 4700 50  0001 C CNN
 F 3 "~" H 4650 4700 50  0001 C CNN
 	1    4650 4700
@@ -259,52 +257,17 @@ Wire Wire Line
 Wire Wire Line
 	4800 4500 4650 4500
 Connection ~ 4650 4500
-$Comp
-L Connector:Conn_01x02_Male J2
-U 1 1 5F7A89C1
-P 900 4550
-F 0 "J2" H 1050 4750 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 1050 4650 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 900 4550 50  0001 C CNN
-F 3 "~" H 900 4550 50  0001 C CNN
-	1    900  4550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2300 2350 2300 2300
 Text Label 2750 2400 2    50   ~ 0
 Ct
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 5F7B64B5
-P 900 4900
-F 0 "J3" H 1050 5100 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 1050 5000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 900 4900 50  0001 C CNN
-F 3 "~" H 900 4900 50  0001 C CNN
-	1    900  4900
-	1    0    0    -1  
-$EndComp
 Text Label 3350 3950 0    50   ~ 0
 GND
-Text Label 1100 4900 0    50   ~ 0
+Text Label 1850 4850 0    50   ~ 0
 SAW_OUT
-Text Label 1100 5400 0    50   ~ 0
-GND
-Text Label 4450 3100 0    50   ~ 0
-EXT_IN
-$Comp
-L Connector:Conn_01x02_Male J4
-U 1 1 5F7B8608
-P 900 5300
-F 0 "J4" H 1050 5500 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 1050 5400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 900 5300 50  0001 C CNN
-F 3 "~" H 900 5300 50  0001 C CNN
-	1    900  5300
-	1    0    0    -1  
-$EndComp
-Text Label 1100 5300 0    50   ~ 0
+Text Label 2750 3100 2    50   ~ 0
+NOISE_IN
+Text Label 1850 4950 0    50   ~ 0
 WAVE_OUT
 $Comp
 L Diode:1N4148 D3
@@ -368,4 +331,89 @@ GND
 Wire Wire Line
 	5750 3550 5750 3250
 Connection ~ 5750 3250
+$Comp
+L power:+VSW #PWR01
+U 1 1 5F861210
+P 2800 4700
+F 0 "#PWR01" H 2800 4550 50  0001 C CNN
+F 1 "+VSW" H 2850 4900 50  0000 C CNN
+F 2 "" H 2800 4700 50  0001 C CNN
+F 3 "" H 2800 4700 50  0001 C CNN
+	1    2800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5F861811
+P 2800 4950
+F 0 "C1" H 2950 5000 50  0000 L CNN
+F 1 "100n" H 2950 4950 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm" H 2838 4800 50  0001 C CNN
+F 3 "~" H 2800 4950 50  0001 C CNN
+	1    2800 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5F8623E5
+P 3300 4950
+F 0 "C2" H 3450 5000 50  0000 L CNN
+F 1 "100n" H 3450 4950 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm" H 3338 4800 50  0001 C CNN
+F 3 "~" H 3300 4950 50  0001 C CNN
+	1    3300 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5F862EE8
+P 2800 5200
+F 0 "#PWR02" H 2800 4950 50  0001 C CNN
+F 1 "GND" H 2850 5000 50  0000 C CNN
+F 2 "" H 2800 5200 50  0001 C CNN
+F 3 "" H 2800 5200 50  0001 C CNN
+	1    2800 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5F8632B7
+P 3300 5200
+F 0 "#PWR04" H 3300 4950 50  0001 C CNN
+F 1 "GND" H 3350 5000 50  0000 C CNN
+F 2 "" H 3300 5200 50  0001 C CNN
+F 3 "" H 3300 5200 50  0001 C CNN
+	1    3300 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-VSW #PWR03
+U 1 1 5F863444
+P 3300 4700
+F 0 "#PWR03" H 3300 4800 50  0001 C CNN
+F 1 "-VSW" H 3300 4900 50  0000 C CNN
+F 2 "" H 3300 4700 50  0001 C CNN
+F 3 "" H 3300 4700 50  0001 C CNN
+	1    3300 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4800 3300 4700
+Wire Wire Line
+	2800 4800 2800 4700
+Wire Wire Line
+	2800 5100 2800 5200
+Wire Wire Line
+	3300 5200 3300 5100
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5FADF292
+P 1650 4850
+F 0 "J2" H 1800 5150 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 1800 5050 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1650 4850 50  0001 C CNN
+F 3 "~" H 1650 4850 50  0001 C CNN
+	1    1650 4850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
